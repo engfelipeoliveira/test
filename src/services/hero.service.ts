@@ -18,7 +18,7 @@ export class HeroService {
   }
 
   getSubHeroes(): Promise<String> {
-    return this.http.get(this.url + "/rest/sub")
+    return this.http.get(this.url + "/sub")
                .toPromise()
                .then(response => response.statusText as String)
                .catch(this.handleError);
